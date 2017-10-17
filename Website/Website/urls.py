@@ -15,6 +15,8 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
+from django.conf.urls.static import static
+from django.conf import settings
 
 # Add this import
 from django.contrib.auth import views
@@ -33,5 +35,9 @@ urlpatterns = [
 	url(r'^login/', include('authentication.urls')), 
 	url(r'^student/', include('student.urls')), 
 	url(r'^businessman/', include('businessman.urls')),
-	url(r'^tourist/', include('tourist.urls')), 	
+	url(r'^tourist/', include('tourist.urls')),
+    url(r'^library/', include('libraries.urls')),
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

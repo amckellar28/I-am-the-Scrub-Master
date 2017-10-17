@@ -6,7 +6,7 @@ from django.contrib.auth.models import Group
 from django.contrib.auth import get_user_model
 
 def index(request):
-    return render(request, 'registration/home.html')
+    return render(request, 'registration/header.html')
 
 def signup(request):
     if request.method == 'POST':
@@ -19,7 +19,7 @@ def signup(request):
             g1 = Group.objects.get(name='Student')
             g1.user_set.add(user)
             login(request, user)
-            return redirect('index')
+            return redirect('/library')
     else:
         form = SignUpForm()
     return render(request, 'registration/signup.html', {'form': form})

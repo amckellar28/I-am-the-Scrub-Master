@@ -30,20 +30,36 @@
 		</div>
 		
 		<div class = "row">
-			<div class = "col-sm-2">
-				<div class="list-group" style = 'width:115%'>
-					<a href="#" class="list-group-item active"> Cras justo odio </a>
-					<a href="#" class="list-group-item">Dapibus ac facilisis in</a>
-					<a href="#" class="list-group-item">Morbi leo risus</a>
-					<a href="#" class="list-group-item">Porta ac consectetur ac</a>
-					<a href="#" class="list-group-item">Vestibulum at eros</a>
-				</div>
-			</div>
-			<div class = "col-sm-10">
-			   {% block content %}
-			   {% endblock %}	
-			</div>
+			<h3> Please select an account type that best suites your needs </h3>
 		</div>
+		<link rel='stylesheet' href="{% static 'Personal/css/metrotiles.css'%}" type='text/css'/>
+		  <div class="row">
+    <div class="col-sm-4">
+	<a href="signupstudent">
+      <div class="tile purple" class="responsive-img">
+        <h3 class="title">Student</h3>
+		</a>
+        <p>Discover Libraries, Colleges and City information</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+	<a href="signupbusiness">
+      <div class="tile red">
+        <h3 class="title">Business </h3>
+		</a>
+        <p>Learn about Hotels, Industries and City Information</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+	<a href="signuptourist">
+      <div class="tile orange">
+        <h3 class="title">Tourist</h3>
+		</a>
+        <p>See what attractions, hotels and other city information</p>
+      </div>
+    </div>
+  </div>
+		
 	</div>
 </body>
 

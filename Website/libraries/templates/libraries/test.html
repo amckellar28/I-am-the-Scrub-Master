@@ -1,16 +1,19 @@
-{% extends "personal/header.html" %}
+{% extends "libraries/header.html" %}
 {% block content %}
 	{% for Library in object_list %}
-    <div class="thumbnail">
+    
   
-      <div class="caption">
-        <h3>{{ Library.title}}</h3>
+      
+        <h3>{{ Library.title}}</h3> 
         <p>Address {{ Library.address}}</p>
-        <p><a href="#" class="btn btn-primary" role="button">Phone {{ Library.number}}
-		</a> <a href="#" class="btn btn-default" role="button">Email {{ Library.emailaddress}} </a></p>
-      </div>
-    </div>
+        <p align = 'right'><a href="#" class="btn btn-primary" role="button" style= "height:35px;width:158px;">Phone {{ Library.number}}
+		</a> <a href="#" class="btn btn-default" role="button" style= "height:35px;width:250px;">Email {{ Library.emailaddress}} </a></p>
+     
+   
 
 	{% endfor %}
+	
+	<p> {{ user.first_name }} {{ user.last_name }}</p>
+	<img src="{{ image.model_pic.url }}"> 
 	
 {% endblock %}
