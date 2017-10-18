@@ -6,7 +6,7 @@ from django.contrib.auth.models import Group
 from django.contrib.auth import get_user_model
 
 def index(request):
-    return render(request, 'registration/header.html')
+    return render(request, 'registration/home2.html')
 
 def signup(request):
     if request.method == 'POST':

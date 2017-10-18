@@ -1,11 +1,22 @@
-{% extends "Personal/header.html" %}
+{% extends "log/base.html" %}
 
 {% block content %}
+<title>Smart City | Home</title>
 <div class="jumbotron" style = 'width:99%;'>
   <h1>Welcome to Smart City!</h1>
   <p>Here you can discover what cities in Australia have to offer. From libraries, Zoos, Attractions and other fun stuff!</p>
-  <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+  <p><a class="btn btn-primary btn-lg" href="/login" role="button">Sign in.</a>&nbsp;<a class="btn btn-primary btn-lg" href="/registration" role="button">Register.</a></p>
 </div>
 
 {% include "Personal/includes/htmlsnippet.html" %}
 {% endblock %}	
+
+{% block javascript %}
+
+<script>
+{% if not user.is_authenticated %}
+$("ul.nav.navbar-nav.navbar-right").css("display","none");
+{% endif %}
+</script>
+
+{% endblock %}

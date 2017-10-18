@@ -23,7 +23,7 @@ def enter_view(request):
 @login_required (login_url="login/")
 @user_passes_test(student_group, login_url='/advising/denied/')
 def index(request):
-	return render(request, 'student/home.html')
+	return render(request, 'student/home2.html')
 
 @login_required	(login_url="login/")
 @user_passes_test(student_group, login_url='/advising/denied/')
