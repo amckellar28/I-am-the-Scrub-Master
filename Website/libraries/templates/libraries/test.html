@@ -1,0 +1,30 @@
+{% extends "libraries/header.html" %}
+{% block content %}
+<title>Smart City | Libraries</title>
+	{% for Library in object_list %}
+    
+  
+      
+        <h3>{{ Library.title}}</h3> 
+        <p>Address {{ Library.address}}</p>
+        <p align = 'right'><a href="#" class="btn btn-primary" role="button" style= "height:35px;width:158px;">Phone {{ Library.number}}
+		</a> <a href="#" class="btn btn-default" role="button" style= "height:35px;width:250px;">Email {{ Library.emailaddress}} </a></p>
+     
+   
+
+	{% endfor %}
+	
+	<p> {{ user.first_name }} {{ user.last_name }}</p>
+	<img src="{{ image.model_pic.url }}"> 
+	
+{% endblock %}
+
+{% block javascript %}
+
+<script>
+{% if not user.is_authenticated %}
+$("ul.nav.navbar-nav.navbar-right").css("display","none");
+{% endif %}
+</script>
+
+{% endblock %}

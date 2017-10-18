@@ -1,0 +1,47 @@
+{% extends "log/base.html" %}
+
+{% block content %}
+{%load staticfiles %}
+<link rel='stylesheet' href="{% static 'Personal/css/metrotiles.css'%}" type='text/css'/>
+<link rel="stylesheet" href="{% static 'student/css/background.css'%}"type='text/css'/>
+<link rel="stylesheet" href="{% static 'student/css/cards.css'%}"type='text/css'/>
+<div class="container-fluid">
+	<div class="row">
+    <div class="col-sm-4">
+	<a href="hotels">
+    <div class="wrimagecard-topimage_header" style="background-color: rgba(119, 178, 88, 0.1)">
+            <center><img src="{% static 'businessman/img/hotels.jpg' %}" class="responsive-img" style='max-height:225px;' alt="face"></center>
+          </div>
+      <div class="tile purple" class="responsive-img">
+        <h3 class="title">Hotels</h3>
+		</a>
+        <p>Find a place to stay in the upgrading city of Brisbane.</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+	<a href="industries">
+    <div class="wrimagecard-topimage_header" style="background-color:  rgba(213, 15, 37, 0.1)">
+            <center><img src="{% static 'businessman/img/industries.jpg' %}" class="responsive-img" style='max-height:225px;' alt="face"></center>
+          </div>
+      <div class="tile red">
+        <h3 class="title">Industries</h3>
+		</a>
+        <p>See all the industries and where to contact them within Brisbane city.</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+	<a href="cityinformation">
+    <div class="wrimagecard-topimage_header" style="background-color:  rgba(51, 105, 232, 0.1)">
+             <center><img src="{% static 'businessman/img/cityinformation.jpg' %}" class="responsive-img" style='max-height:225px;' alt="face"></center>
+          </div>
+      <div class="tile orange">
+        <h3 class="title">City Information</h3>
+		</a>
+        <p>Explore more information about brisbane including malls, parks, zoos, city map and more!</p>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</div>
+{% endblock %}

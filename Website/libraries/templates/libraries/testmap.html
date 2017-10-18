@@ -1,0 +1,21 @@
+{% extends "libraries/header.html" %}
+{% block content %}
+	{% for maps in object_list %}
+    
+  
+      
+        <h3>{{ maps.title}}</h3> 
+
+<!-- 		<div class="panel-heading post-heading1">
+              <img src="{{ maps.img_brief}}">
+           </div> -->
+		   
+		   <img src="{{ maps.image.url}}" class='img-responsive' style = 'height:200px; width: 200px;' >
+     
+   
+
+	{% endfor %}
+	
+
+	
+{% endblock %}

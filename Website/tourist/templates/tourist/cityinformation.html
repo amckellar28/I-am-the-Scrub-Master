@@ -1,0 +1,86 @@
+{% extends "log/base.html" %}
+
+{% block content %}
+{%load staticfiles %}
+<link rel='stylesheet' href="{% static 'Personal/css/metrotiles.css'%}" type='text/css'/>
+<link rel="stylesheet" href="{% static 'student/css/background.css'%}"type='text/css'/>
+<link rel="stylesheet" href="{% static 'student/css/cards.css'%}"type='text/css'/>
+<div class="container-fluid">
+	<div class="row">
+    <div class="col-sm-4">
+	<a href="parks">
+	<div class="wrimagecard-topimage_header" style="background-color: rgba(119, 178, 88, 0.1)">
+            <center><img src="{% static 'student/img/parks.jpg' %}" class="responsive-img" style='max-height:225px;' alt="face"></center>
+          </div>
+      <div class="tile purple" class="responsive-img">
+        <h3 class="title">Parks</h3>
+		</a>
+        <p>See our range of parks, including local parks and theme parks.</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+	<a href="zoos">
+	<div class="wrimagecard-topimage_header" style="background-color:  rgba(213, 15, 37, 0.1)">
+            <center><img src="{% static 'student/img/zoos.jpg' %}" class="responsive-img" style='max-height:225px;' alt="face"></center>
+          </div>
+      <div class="tile red">
+        <h3 class="title">Zoos</h3>
+		</a>
+        <p>Enjoy the local wildlife of Brisbane and Australia in our zoos!.</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+	<a href="museums">
+	<div class="wrimagecard-topimage_header" style="background-color:  rgba(51, 105, 232, 0.1)">
+             <center><img src="{% static 'student/img/museums.jpg' %}" class="responsive-img" style='max-height:225px;' alt="face"></center>
+          </div>
+      <div class="tile orange">
+        <h3 class="title">Museums</h3>
+		</a>
+        <p>View the local history of the area, as well other things from the past.</p>
+      </div>
+    </div>
+  </div>
+  
+   <div class="row">
+    <div class="col-sm-4">
+    <a href="malls">
+          <div class="wrimagecard-topimage_header" style="background-color:  rgba(250, 188, 9, 0.1)">
+             <center><img src="{% static 'student/img/malls.jpg' %}" class="responsive-img" style='max-height:250px;' alt="face"></center>
+          </div>
+      <div class="tile green">
+        <h3 class="title">Malls</h3>
+        </a>
+        <p>Lavish in the large and small malls of Brisbane, with over 2000 retailers across the city.</p>
+      </div>
+    </div>
+    
+    <div class="col-sm-4">
+    <a href="restaurants">
+            <div class="wrimagecard-topimage_header" style="background-color: rgba(121, 90, 71, 0.1)">
+           <center><img src="{% static 'student/img/restaurants.jpg' %}" class="responsive-img" style='max-height:250px;' alt="face"></center> 
+          </div>
+      <div class="tile blue">
+        <h3 class="title">Restaurants</h3>
+        </a>
+        <p>Indulge in the multicultural taste of brisbane food, variety in many parts of Brisbane.</p>
+      </div>
+    </div>   
+    
+    <div class="col-sm-4">
+     <a href="citymap">
+         <div class="wrimagecard-topimage_header" style="background-color: rgba(130, 93, 9, 0.1)">
+            <center><img src="{% static 'student/img/citymap.jpg' %}" class="responsive-img" style='max-height:250px;' alt="face"></center>
+          </div>
+      <div class="tile yellow">
+        <h3 class="title">City Map</h3>
+        </a>
+        <p>Need to know area? The city map of Brisbane city should point you in your direction.</p>
+      </div>
+    </div>
+  </div>	
+    
+  
+</div>
+</div>
+{% endblock %}
