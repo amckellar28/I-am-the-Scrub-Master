@@ -36,7 +36,7 @@ urlpatterns = [
 	url(r'^student/', include('student.urls')), 
 	url(r'^businessman/', include('businessman.urls')),
 	url(r'^tourist/', include('tourist.urls')),
-    url(r'^library/', include('libraries.urls')),
+    url(r'^resources/', include('libraries.urls')),
 ]
 
 if settings.DEBUG:

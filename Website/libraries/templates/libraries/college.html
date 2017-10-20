@@ -1,0 +1,56 @@
+{% extends "libraries/header.html" %}
+{% block content %}
+
+<div class = "container-fluid" style="min-height:100%;">
+		<div class = "row">
+			<div class = "col-sm-2">
+			</div>
+			<div class = "col-sm-8">
+			<h1>Colleges</h1>
+			</div>
+		</div>
+			
+		<div class = "row">
+			<div class = "col-sm-2">
+			</div>
+			<div class = "col-sm-8">
+			
+<title>Smart City | Libraries</title>
+	{% for Colleges in object_list %}
+		
+		<div class="media">
+			<div class="media-left media-middle">
+				<a href="#">
+				
+					<img class="media-object" src="{{ Colleges.getImage}}" style = 'height:200px; width: 200px;' >
+				</a>
+			</div>
+			<div class="media-body"><a href="{{ Colleges.home_page}}">
+				<h4 class="media-heading">{{ Colleges.title}}</h4> </a>
+				<p> Address {{ Colleges.address}} </p>
+				<p> Schools Offered: {{ Colleges.departments}} </p>
+				<p>{{ Colleges.description}} </p>
+				<p align = 'right'><a href="#" class="btn btn-default" role="button" style= "height:45px;width:250px;">Email {{ Colleges.emailaddress}} </a></p>
+			</div>
+		</div>
+     
+   
+
+	{% endfor %}
+	</div>
+	</div>
+	</div>
+
+	
+{% endblock %}
+
+
+{% block javascript %}
+
+<script>
+{% if not user.is_authenticated %}
+$("ul.nav.navbar-nav.navbar-right").css("display","none");
+{% endif %}
+</script>
+
+{% endblock %}
