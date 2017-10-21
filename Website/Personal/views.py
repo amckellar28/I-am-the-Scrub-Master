@@ -9,3 +9,9 @@ def selectcity(request):
     
 def accessdenied(request):
 	return render(request, 'Personal/accessdenied.html')
+    
+def contactus(request):
+    return render(request, 'Personal/contactus.html')
+    
+def FAQ(request):
+    return render(request, 'Personal/FAQ.html')

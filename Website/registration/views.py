@@ -19,7 +19,7 @@ def signup(request):
             g1 = Group.objects.get(name='Student')
             g1.user_set.add(user)
             login(request, user)
-            return redirect('/library')
+            return redirect('/login')
     else:
         form = SignUpForm()
     return render(request, 'registration/signup.html', {'form': form})
