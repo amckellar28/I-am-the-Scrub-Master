@@ -10,7 +10,7 @@ urlpatterns = [
                 url(r'^library/', ListView.as_view(
                                     queryset=Library.objects.all(),
                                     template_name="libraries/library.html")),
-                url(r'^maptest/', ListView.as_view(
+                url(r'^map/', ListView.as_view(
                                     queryset= maps.objects.all(),
                                     template_name="libraries/testmap.html")),
                 url(r'^zoo/', ListView.as_view(

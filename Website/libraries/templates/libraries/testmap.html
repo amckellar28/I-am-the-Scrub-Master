@@ -1,21 +1,36 @@
+
 {% extends "libraries/header.html" %}
 {% block content %}
-	{% for maps in object_list %}
-    
-  
-      
-        <h3>{{ maps.title}}</h3> 
 
-<!-- 		<div class="panel-heading post-heading1">
-              <img src="{{ maps.img_brief}}">
-           </div> -->
-		   
-		   <img src="{{ maps.image.url}}" class='img-responsive' style = 'height:200px; width: 200px;' >
-     
+<div class = "container-fluid" style="min-height:100%;">
+		<div class = "row">
+			<div class = "col-sm-2">
+			</div>
+			<div class = "col-sm-8">
+			<h1>Maps of Brisbane</h1>
+			</div>
+		</div>
+			
+		<div class = "row">
+			<div class = "col-sm-2">
+			</div>
+			<div class = "col-sm-8">
+			
+<title>Smart City | Libraries</title>
+	{% for maps in object_list %}
+		<h3>{{ maps.title}}</h3> 
+		<center>
+		<img src="{{ maps.image.url}}" class='img-responsive'  >
+		</center>
+
    
 
 	{% endfor %}
-	
+	</div>
+	</div>
+	</div>
 
 	
 {% endblock %}
+
+
