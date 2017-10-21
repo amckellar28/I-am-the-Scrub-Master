@@ -1,11 +1,19 @@
 {% extends "log/base.html" %}
 
 {% block content %}
-<title>Smart City | Home</title>
-<div class="jumbotron" style = 'width:99%;'>
-  <h1>Welcome to Smart City!</h1>
-  <p>Here you can discover what cities in Australia have to offer. From libraries, Zoos, Attractions and other fun stuff!</p>
-  <p><a class="btn btn-primary btn-lg" href="/login" role="button">Sign in.</a>&nbsp;<a class="btn btn-primary btn-lg" href="/registration" role="button">Register.</a></p>
+<div class = "container-fluid" style="min-height:100%;">		
+		<div class = "row">
+			<div class = "col-sm-1">
+			</div>
+			<div class = "col-sm-10">
+				<title>Smart City | Home</title>
+					<div class="jumbotron" style = 'width:99%;'>
+						<h1>Welcome to Smart City!</h1>
+						<p>Here you can discover what cities in Australia have to offer. From libraries, Zoos, Attractions and other fun stuff!</p>
+						<p><a class="btn btn-primary btn-lg" href="/login" role="button">Sign in.</a>&nbsp;<a class="btn btn-primary btn-lg" href="/registration" role="button">Register.</a></p>
+					</div>
+			</div>
+		</div>
 </div>
 
 {% include "Personal/includes/htmlsnippet.html" %}
