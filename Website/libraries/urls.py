@@ -4,7 +4,17 @@ from libraries.models import Library, maps, Zoos, Museums, Colleges, Malls
 from libraries.models import Industries, Hotels, Parks, Restaurants
 from django.conf.urls.static import static
 from django.conf import settings
+from . import views
+from django.contrib.auth.decorators import user_passes_test
 
+def group_required(*group_names):
+    """Requires user membership in at least one of the groups passed in."""
+    def in_groups(u):
+        if u.is_authenticated():
+            if bool(u.groups.filter(name__in=group_names)) | u.is_superuser:
+                return True
+        return False
+    return user_passes_test(in_groups)
 
 urlpatterns = [ 
                 url(r'^library/', ListView.as_view(

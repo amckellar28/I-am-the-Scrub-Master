@@ -5,10 +5,10 @@ from django.contrib.auth.decorators import login_required, user_passes_test
 # Create your views here.
 	 
 def student_group(user):
-    return user.is_authenticated() and user.groups.filter(name='Student').exists()
+    return user.is_authenticated() and user.groups.filter(name='Student').exists() or admin_group(user)
 
 def tourist_group(user):
-    return user.is_authenticated() and user.groups.filter(name='Tourist').exists()
+    return user.is_authenticated() and user.groups.filter(name='Tourist').exists() or admin_group(user)
 
 def admin_group(user):
     return user.is_authenticated() and user.is_staff
@@ -27,6 +27,7 @@ def enter_view(request):
 
 @login_required (login_url="login/")
 @user_passes_test(student_group, login_url='/advising/denied/')
+
 def index(request):
 	return render(request, 'student/home2.html')
 

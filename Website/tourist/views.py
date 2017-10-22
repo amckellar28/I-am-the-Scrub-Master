@@ -3,7 +3,11 @@ from django.contrib.auth.decorators import login_required, user_passes_test
 
 # Create your views here.
 def tourist_group(user):
-    return user.is_authenticated() and user.groups.filter(name='Tourist').exists()
+    return user.is_authenticated() and user.groups.filter(name='Tourist').exists() or admin_group(user)
+
+def admin_group(user):
+    return user.is_authenticated() and user.is_staff
+
 
 @login_required
 @user_passes_test(tourist_group, login_url='/advising/denied/')
