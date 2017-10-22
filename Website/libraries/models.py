@@ -23,7 +23,6 @@ class Library(models.Model):
 
 class Colleges(models.Model):
     title = models.CharField(max_length = 140)
-    rank = models.CharField(max_length = 140)
     address = models.TextField()
     departments = models.TextField()
     emailaddress = models.EmailField(max_length=254)
@@ -33,7 +32,6 @@ class Colleges(models.Model):
     width_field = models.IntegerField(default = 0)
     home_page = models.URLField(max_length=200)
     description = models.TextField()
-
 
     def __str__(self):
         return self.title
