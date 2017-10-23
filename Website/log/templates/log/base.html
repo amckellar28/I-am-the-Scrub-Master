@@ -37,7 +37,27 @@
 	            <li><a href="/contactus">Contact Us</a></li>
 	            <li class="divider"></li>
 	            <li><a href="/">Select City</a></li>
-	            <li class="divider"></li>
+                <li class="divider"></li>
+                {% if request.user.is_superuser %}
+                <li class="divider"></li>
+                <li class="divider"></li>
+                <li><b>&nbsp &nbsp Admin Control Panel</b></li>
+                <li class="divider"></li>
+                <li>&nbsp &nbsp User Views</li>
+                <li class="divider"></li>
+                <li><a href="/student">View Student Page</a></li>
+                <li><a href="/businessman">View Businessman Page</a></li>
+                <li><a href="/tourist">View Tourist Page</a></li>
+                <li class="divider"></li>
+                <li>&nbsp &nbsp Management</li>
+                <li class="divider"></li>
+                <li><a href="/admin/auth/user/">Manage/Delete Users</a></li>
+                <li><a href="/admin/libraries/">Manage Library Data</a></li>
+                <li><a href="/admin/Personal/event/">Manage Recent Events</a></li>
+                <li><a href="/admin/libraries/maps/add/">Upload City Map</a></li>
+                <li class="divider"></li>
+                {% endif %}
+                <li class="divider"></li>
 	            <li><a href="/logout">Logout</a></li>
 	          </ul>
 	        </li>

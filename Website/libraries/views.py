@@ -23,5 +23,10 @@ def student_group(user):
 @user_passes_test(student_group, login_url='/advising/denied/')
 def my_view(request):
     return render(request, 'libraries/test.html')
+    
+@login_required (login_url="login/")
+@user_passes_test(student_group, login_url='/advising/denied/')
+def libraries(request):
+	return render(request, 'libraries/college.html')
 
 
