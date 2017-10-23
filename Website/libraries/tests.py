@@ -38,3 +38,13 @@ class librariesModelTest(TestCase):
         field_label = item.emailaddress
         self.assertEquals(field_label,'library@website.com')
 
+    def test_home_page_label(self):
+        item = Library.objects.get(id=1)
+        field_label = item.home_page
+        self.assertEquals(field_label,'www.website.com')
+
+    def test_description_label(self):
+        item = Library.objects.get(id=1)
+        field_label = item.description
+        self.assertEquals(field_label,'items')
+

@@ -25,18 +25,18 @@ from student.views import enter_view
 
 urlpatterns = [
     url(r'^enter/', enter_view, name='enter_view'),
-	url(r'^registration/', include('registration.urls')),
-    url(r'^admin/', admin.site.urls),
-	url(r'^home/', include('log.urls')),
+    url(r'^registration/', include('registration.urls')),
+    url(r'^home/', include('log.urls')),
     url(r'^login/$', views.login, {'template_name': 'log/login.html', 'authentication_form': LoginForm}, name='login'),
     url(r'^logout/$', views.logout, {'next_page': '/'}),  
-	url(r'^webapp/', include('webapp.urls')),
-	url(r'^', include('Personal.urls')),
-	url(r'^login/', include('authentication.urls')), 
-	url(r'^student/', include('student.urls')), 
-	url(r'^businessman/', include('businessman.urls')),
-	url(r'^tourist/', include('tourist.urls')),
+    url(r'^webapp/', include('webapp.urls')),
+    url(r'^', include('Personal.urls')),
+    url(r'^login/', include('authentication.urls')), 
+    url(r'^student/', include('student.urls')), 
+    url(r'^businessman/', include('businessman.urls')),
+    url(r'^tourist/', include('tourist.urls')),
     url(r'^resources/', include('libraries.urls')),
+    url(r'^admin/', admin.site.urls),
 ]
 
 if settings.DEBUG:
