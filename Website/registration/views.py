@@ -35,7 +35,7 @@ def signupbusiness(request):
             g1 = Group.objects.get(name='Businessman')
             g1.user_set.add(user)
             login(request, user)
-            return redirect('index')
+            return redirect('/login')
     else:
         form = SignUpForm()
     return render(request, 'registration/signup.html', {'form': form})
@@ -51,7 +51,7 @@ def signuptourist(request):
             g1 = Group.objects.get(name='Tourist')
             g1.user_set.add(user)
             login(request, user)
-            return redirect('index')
+            return redirect('/login')
     else:
         form = SignUpForm()
     return render(request, 'registration/signup.html', {'form': form})
