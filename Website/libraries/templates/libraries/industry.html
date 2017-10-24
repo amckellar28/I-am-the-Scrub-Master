@@ -1,6 +1,7 @@
 {% extends "libraries/header.html" %}
+{% load custom %}
 {% block content %}
-
+{% if user.is_authenticated %} 
 
 <div class = "container-fluid" style="min-height:100%;">
 {% load custom %}
@@ -46,7 +47,11 @@
 	</div>
 				
 	</div>
-
+{% else %}
+	<center>
+		<h1>Access Denied</h1>
+	</center>
+{% endif %}	
 
 {% endblock %}
 
