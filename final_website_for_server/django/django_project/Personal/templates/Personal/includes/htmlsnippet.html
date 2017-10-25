@@ -1,0 +1,36 @@
+
+{% block content %}
+
+<div class = "container-fluid" style="min-height:100%;">
+			
+		<div class = "row">
+			<div class = "col-sm-1">
+			</div>
+			<div class = "col-sm-10">
+			
+<title>Smart City | Personal</title>
+	{% for Event in object_list %}
+		
+		<div class="media">
+			<div class="media-left media-middle">
+				<a href="#">
+				
+					<img class="media-object" src="{{ Event.getImage}}" style = 'height:150px; width: 150px;' >
+				</a>
+			</div>
+			<div class="media-body"><a href="{{ Event.home_page}}">
+				<h4 class="media-heading">{{ Event.title}}</h4> </a>
+				<p> Dates {{ Event.dates}} </p>
+				<p>{{ Event.description}} </p>
+			</div>
+		</div>
+     
+   
+
+	{% endfor %}
+	</div>
+	</div>
+	</div>
+
+	
+{% endblock %}

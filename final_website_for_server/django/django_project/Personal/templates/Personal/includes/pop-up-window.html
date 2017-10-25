@@ -1,0 +1,29 @@
+{% block content %}
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Sign In</h4>
+        </div>
+        <div class="modal-body">
+			<center>
+			<div class="input-group" style = 'width:80%'>
+			<input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
+			</div>
+			<div class="input-group" style = 'width:80%'>
+			<input type="text" class="form-control" placeholder="Password" aria-describedby="basic-addon1">
+			</div>
+			<p>Not a member yet, why not <a href="#">Sign up!!! </a></p>
+			</center>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Login</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+{% endblock %}	

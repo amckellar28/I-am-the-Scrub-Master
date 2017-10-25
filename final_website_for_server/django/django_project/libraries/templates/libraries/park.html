@@ -1,0 +1,60 @@
+{% extends "libraries/header.html" %}
+{% block content %}
+{% if user.is_authenticated %} 
+
+<div class = "container-fluid" style="min-height:100%;">
+		<div class = "row">
+			<div class = "col-sm-2">
+			</div>
+			<div class = "col-sm-8">
+			<h1>Parks</h1>
+			</div>
+		</div>
+			
+		<div class = "row">
+			<div class = "col-sm-2">
+			</div>
+			<div class = "col-sm-8">
+			
+<title>Smart City | Parks</title>
+	{% for Parks in object_list %}
+		
+		<div class="media">
+			<div class="media-left media-middle">
+				<a href="#">
+				
+					<img class="media-object" src="{{ Parks.getImage}}" style = 'height:200px; width: 200px;' >
+				</a>
+			</div>
+			<div class="media-body"><a href="{{ Parks.home_page}}">
+				<h4 class="media-heading">{{ Parks.title}}</h4> </a>
+				<p> Address {{ Parks.address}} </p>
+				<p>{{ Parks.description}} </p>
+				<p align = 'right'><a href="#" class="btn btn-primary" role="button" style= "height:45px;width:200px;">Phone {{ Parks.number}}
+				</a> <a href="#" class="btn btn-default" role="button" style= "height:45px;width:250px;">Email {{ Parks.emailaddress}} </a></p>
+			</div>
+		</div>
+     
+   
+
+	{% endfor %}
+	</div>
+	</div>
+	</div>
+{% else %}
+	<center>
+		<h1>Access Denied</h1>
+	</center>
+{% endif %}
+{% endblock %}
+
+
+{% block javascript %}
+
+<script>
+{% if not user.is_authenticated %}
+$("ul.nav.navbar-nav.navbar-right").css("display","none");
+{% endif %}
+</script>
+
+{% endblock %}

@@ -1,0 +1,50 @@
+{% extends "log/base.html" %}
+
+{% block content %}
+{%load staticfiles %}
+<title>Smart City | Registration</title>
+<link rel='stylesheet' href="{% static 'Personal/css/metrotiles.css'%}" type='text/css'/>
+<link rel="stylesheet" href="{% static 'student/css/background.css'%}"type='text/css'/>
+<link rel="stylesheet" href="{% static 'student/css/cards.css'%}"type='text/css'/>
+<h3> Please select an account type that best suites your needs </h3>
+<div class="container-fluid">
+	<div class="row">
+    <div class="col-sm-4">
+	<a href="signupstudent">
+      <div class="tile purple" class="responsive-img">
+        <h3 class="title">Student</h3>
+		</a>
+        <p>Get student information on colleges, libraries and more.</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+	<a href="signupbusiness">
+      <div class="tile red">
+        <h3 class="title">Businessman</h3>
+		</a>
+        <p>Get access to a list of industries, nice hotels and more..</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+	<a href="signuptourist">
+      <div class="tile orange">
+        <h3 class="title">Tourist</h3>
+		</a>
+        <p>Find a nice place to stay and broad information about the city!</p>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</div>
+{% endblock %}
+
+{% block javascript %}
+
+<script>
+{% if not user.is_authenticated %}
+$("ul.nav.navbar-nav.navbar-right").css("display","none");
+{% endif %}
+</script>
+
+{% endblock %}

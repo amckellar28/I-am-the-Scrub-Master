@@ -1,0 +1,67 @@
+{% extends "libraries/header.html" %}
+{% load custom %}
+{% block content %}
+{% if user.is_authenticated %} 
+
+<div class = "container-fluid" style="min-height:100%;">
+{% load custom %}
+		<div class = "row">
+			<div class = "col-sm-2">
+
+			</div>
+			<div class = "col-sm-8">
+			<h1>Industries</h1>
+
+			</div>
+		</div>
+			
+		<div class = "row">
+			<div class = "col-sm-2">
+			</div>
+			<div class = "col-sm-8">
+			
+<title>Smart City | Industries</title>
+	{% for Industries in object_list %}
+		
+		<div class="media">
+			<div class="media-left media-middle">
+				<a href="#">
+				
+					<img class="media-object" src="{{ Industries.getImage}}" style = 'height:200px; width: 200px;' >
+				</a>
+			</div>
+			<div class="media-body"><a href="{{ Industries.home_page}}">
+				<h4 class="media-heading">{{ Industries.title}}</h4> </a>
+				<p> Address {{ Industries.address}} </p>
+				<p>{{ Industries.description}} </p>
+				<p align = 'right'><a href="#" class="btn btn-primary" role="button" style= "height:45px;width:200px;">Type {{ Industries.industrytype}}
+				</a> <a href="#" class="btn btn-default" role="button" style= "height:45px;width:300px;">Email {{ Industries.emailaddress}} </a></p>
+			</div>
+		</div>
+     
+   
+
+	{% endfor %}
+
+	</div>
+	</div>
+				
+	</div>
+{% else %}
+	<center>
+		<h1>Access Denied</h1>
+	</center>
+{% endif %}	
+
+{% endblock %}
+
+
+{% block javascript %}
+
+<script>
+{% if not user.is_authenticated %}
+$("ul.nav.navbar-nav.navbar-right").css("display","none");
+{% endif %}
+</script>
+
+{% endblock %}
