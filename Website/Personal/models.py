@@ -18,3 +18,4 @@ class Event(models.Model):
             return self.image.url
         if not self.image:
             return '/media/default-placeholder-300x300.png'
+        
